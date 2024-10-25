@@ -1,7 +1,7 @@
 import React from 'react';
 import CartItem from './cartItem'; // Adjust the import path as needed
 import './Cart.css'; // Optional CSS for the Cart component
-
+//
 const Cart = () => {
   // Sample course data
   const courses = [

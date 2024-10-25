@@ -4,7 +4,7 @@ import CartItem from './cartItem'; // Ensure capitalization matches the file nam
 import CartSummary from './CartSummary';
 import Footer from './Footer';
 import './App.css';
-// dhdhsjds
+// 
 
 const App = () => {
   // Mock data for cart items

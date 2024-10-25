@@ -14,5 +14,5 @@ const CartSummary = ({ total }) => {
     </div>
   );
 };
-
+// 
 export default CartSummary;

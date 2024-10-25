@@ -12,7 +12,6 @@ const Header = () => {
   const toggleDropdown = (type) => {
     setActiveDropdown(activeDropdown === type ? null : type); // Close if it's already open, otherwise open
   };
-
   return (
     <header className="header">
       <div className="navbar">
