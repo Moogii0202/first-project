@@ -1,0 +1,24 @@
+.cart-summary {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .checkout-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .coupon-section {
+    margin-top: 10px;
+  }
+  
+  .coupon-section input {
+    padding: 5px;
+  }
+  

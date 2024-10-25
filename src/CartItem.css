@@ -1,0 +1,37 @@
+.cart-item {
+    display: flex;
+    align-items: center; /* Center vertically */
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.course-image {
+    width: 100px; /* Set a specific width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.course-info {
+    width: 70%;
+}
+
+.course-actions {
+    text-align: right;
+}
+
+.price {
+    font-size: 18px;
+    color: #111;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.actions button {
+    margin-right: 10px;
+}
