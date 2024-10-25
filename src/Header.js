@@ -3,9 +3,14 @@ import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null); // Track which dropdown is active
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleDropdown = (type) => {
+    setActiveDropdown(activeDropdown === type ? null : type); // Close if it's already open, otherwise open
   };
 
   return (
@@ -13,9 +18,7 @@ const Header = () => {
       <div className="navbar">
         {/* Left section with logo and menu toggle */}
         <div className="navbar-left">
-          <div className="logo">
-            Blackat
-          </div>
+          <div className="logo">Blackat</div>
           <div className="menu-toggle" onClick={toggleMenu}>
             <span>&#9776;</span>
           </div>
@@ -50,13 +53,57 @@ const Header = () => {
 
       {/* Bottom Navigation Links - Toggles on small screens */}
       <div className={`navbar-bottom ${isMenuOpen ? 'open' : ''}`}>
-        <a href="#">IT & Software</a>
-        <a href="#">Санхүү</a>
-        <a href="#">Хувь Хүний Хөгжил</a>
-        <a href="#">Дизайн</a>
-        <a href="#">Маркетинг</a>
-        <a href="#">Эрүүл Мэнд & Фитнесс</a>
-        <a href="#">Хөгжим</a>
+        <div className="dropdown-container">
+          <a href="#" className="nav-link" onClick={() => toggleDropdown('IT')}>
+            IT & Software
+          </a>
+          {activeDropdown === 'IT' && (
+            <div className="dropdown-menu">
+              <a href="#">Java</a>
+              <a href="#">Python</a>
+              <a href="#">C++</a>
+              <a href="#">JavaScript</a>
+              <a href="#">HTML & CSS</a>
+              <a href="#">Ruby</a>
+              <a href="#">Go</a>
+              <a href="#">Kotlin</a>
+              <a href="#">Swift</a>
+              <a href="#">PHP</a>
+              <a href="#">TypeScript</a>
+              <a href="#">SQL</a>
+              <a href="#">R</a>
+              <a href="#">Scala</a>
+              <a href="#">Perl</a>
+            </div>
+          )}
+        </div>
+
+        <div className="dropdown-container">
+          <a href="#" className="nav-link" onClick={() => toggleDropdown('Finance')}>
+            Санхүү
+          </a>
+          {activeDropdown === 'Finance' && (
+            <div className="dropdown-menu">
+              <a href="#">Java</a>
+              <a href="#">Python</a>
+              <a href="#">C++</a>
+              <a href="#">JavaScript</a>
+              <a href="#">HTML & CSS</a>
+              <a href="#">Ruby</a>
+             
+            </div>
+          )}
+        </div>
+
+        <a href="#" className="nav-link" onClick={() => toggleDropdown('PersonalDevelopment')}>
+          Хувь Хүний Хөгжил
+        </a>
+        {/* You can add dropdown for this section similarly if needed */}
+
+        <a href="#" className="nav-link" onClick={() => toggleDropdown('Design')}>
+          Дизайн
+        </a>
+        {/* Add more links as necessary */}
       </div>
     </header>
   );

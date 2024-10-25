@@ -9,13 +9,16 @@
 }
 
 .course-image {
-    width: 100px; /* Set a specific width */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: 20px; /* Space between image and text */
+    width: 100px;             /* Set a specific width */
+    height: auto;             /* Maintain aspect ratio */
+    margin-right: 20px;       /* Space between image and text */
+    border-radius: 5px;       /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
 }
 
 .course-info {
-    width: 70%;
+    width: 70%;     
 }
 
 .course-actions {
@@ -32,6 +35,43 @@
     color: #888;
 }
 
+.rating-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.best-seller {
+    margin-right: 40px; /* Increase space after 'Best seller' */
+}
+
+.rating {
+    margin-right: 40px; /* Increase space after rating stars */
+}
+
+.lecture-info {
+    margin-top: 10px; /* Space above the lecture info */
+}
+
+.lecture-info span {
+    margin-right: 40px; /* Increase space between each span */
+}
+
+.actions {
+    display: flex;                /* Use flexbox for layout */
+    flex-direction: row;         /* Arrange buttons in a row */
+    justify-content: flex-end;   /* Align buttons to the right */
+    margin-top: 10px;            /* Add space above the buttons */
+}
+
 .actions button {
-    margin-right: 10px;
+    margin: 0 5px;              /* Add horizontal spacing between buttons */
+    background-color: #003877;
+    color: rgb(251, 251, 251);
+    padding: 0 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    width: auto;                 /* Auto width for buttons */
+       /* Border for buttons */
 }
